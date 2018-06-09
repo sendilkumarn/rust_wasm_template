@@ -114,6 +114,9 @@ function do_wasm {
            ./bin/wasm-bindgen \
            --out-dir . \
            "$target_wasm_file"
+    
+    header $(ls)
+    header $(pwd)
 
     local local_wasm_file=$(ls *.wasm)
 
